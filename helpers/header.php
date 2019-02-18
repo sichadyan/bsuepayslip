@@ -129,7 +129,7 @@ to get the desired effect
           </li>
 
           <li class="nav-item">
-            <a href="employeelist.php" class="nav-link">
+            <a href="department.php" class="nav-link">
               <i class="fa fa-building nav-icon"></i>
               <p>Department</p>
             </a>
