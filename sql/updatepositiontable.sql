@@ -1,0 +1,1 @@
+ALTER TABLE `position` CHANGE `departmentname` `positionname` VARCHAR(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL, CHANGE `departmentdescription` `positiondescription` VARCHAR(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
