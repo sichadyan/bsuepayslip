@@ -1,6 +1,6 @@
 <?php
 //Always include this on the top your PHP page
-include('config/authenticate.php')  
+include('../config/authenticate.php')  
 ?>
 
 <!DOCTYPE html>
@@ -121,53 +121,7 @@ to get the desired effect
           </li> -->
           
           
-          <li class="nav-item">
-            <a href="employeelist.php" class="nav-link">
-              <i class="fa fa-user-circle nav-icon"></i>
-              <p>Employee</p>
-            </a>
-          </li>
-
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-address-card"></i>
-              <p> System Users <em class="fa fa-angle-left right"></em> </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="userlist.php" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>User Roles</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-            <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-money-bill-alt"></i>
-              <p>Payroll<em class="fa fa-angle-left right"></em> </p>
-            </a>
-            <ul class="nav nav-treeview">
-            <li class="nav-item">
-                <a href="payroll.php" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Generate Payroll</p></p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>View Payroll</p>
-                </a>
-              </li>
-               <!-- <li class="nav-item">
-                <a href="deductionassignment.php" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Deduction Assignment</p>
-                </a>
-              </li> -->
-            </ul>
-          </li>
+          
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-edit"></i>
@@ -183,34 +137,14 @@ to get the desired effect
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Payslip Setup</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>History</p>
+                  <p>Benefits</p>
                 </a>
               </li>
             </ul>
           </li>
-          <li class="nav-header">MISCELLANEOUS</li>
-          <li class="nav-item">
-            <a href="mailbox.php" class="nav-link">
-              <i class="nav-icon fa fa-print"></i>
-              <p>Messages</p>
-            </a>
-              <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-toolbox"></i>
-              <p>Reports</p>
-            </a>
-            <li class="nav-item">
-            <a href="backuprestore.php" class="nav-link">
-              <i class="nav-icon fa fa-cloud"></i>
-              <p>Backup and Restore</p>
-            </a>
-          </li>
+          
+         
+             
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
