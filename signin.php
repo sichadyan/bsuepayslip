@@ -115,7 +115,14 @@ if (ISSET($_POST['btnSubmit'])){
     if ($data != null && $data['count'] != 0){
         $_SESSION["isLogin"] = $data['data'][0];
         $fullname = $data['data'][0]['lastname'] . ", " . $data['data'][0]['firstname'];
-        echo (popUp("success","Authenticated", "Welcome! ". $fullname ,"index.php"));
+        $roleid = $data['data'][0]['roleid'];
+        $pw = $data['data'][0]['password'];
+          if($roleid == 0){
+            echo (popUp("success","Authenticated", "Welcome! ". $fullname ,"index.php"));
+          }
+          else{
+            echo (popUp("success","Authenticated", "Welcome! ". $fullname ,"employee/index.php"));
+          }
         exit();
     }
     else{
