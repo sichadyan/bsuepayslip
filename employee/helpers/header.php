@@ -13,7 +13,7 @@ include('config/authenticate.php')
   <title>ePayslip | <?php echo (isset($_HeaderTitle) ? $_HeaderTitle : 'Welcome'); ?></title>
 
 <!-- datatables -->
-<link rel="stylesheet" href="plugins/datatables/datatables.css">
+<link rel="stylesheet" href="../plugins/datatables/datatables.css">
   <!-- Font Awesome Icons -->
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -21,9 +21,9 @@ include('config/authenticate.php')
   <!-- IonIcons -->
   <!-- <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
   <!-- datepicker -->
-  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <link rel="stylesheet" href="../plugins/datepicker/datepicker3.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.css">
+  <link rel="stylesheet" href="../dist/css/adminlte.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
