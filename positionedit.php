@@ -105,7 +105,7 @@ if (ISSET($_POST["btnUpdate"])){
                     modifieddate='$modifieddate'";
     $filter= "id='$_id'";
 
-    $result = _updateData($tablename,$columvalues,$filter);
+    $result = _updateData($tablename,$columvalues,$filter);        
     if($result['data']) { 
         echo (popUp("success","Updated!", "(" . $result['count'] . ") Record Updated!","position.php"));
     } else {  
