@@ -128,12 +128,12 @@ to get the desired effect
             </a>
           </li>
 
-          <li class="nav-item">
+<!--           <li class="nav-item">
             <a href="department.php" class="nav-link">
               <i class="fa fa-building nav-icon"></i>
               <p>Department</p>
             </a>
-          </li>
+          </li> -->
 
           <li class="nav-item">
             <a href="position.php" class="nav-link">
