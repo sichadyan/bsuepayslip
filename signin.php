@@ -107,8 +107,8 @@ if (ISSET($_POST['btnSubmit'])){
 
     $idnumber=$_POST['uName'];
     $password=md5($_POST['uPass']);
-   
-
+    
+    
     $data = _getAllDataByParam('user','idnumber="' . $idnumber . '" and password="' . $password . "\"");
     //var_dump($data['data']);
 

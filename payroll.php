@@ -20,13 +20,13 @@
 
           <!-- Standar Form -->
           <h4>Select excel file from your computer</h4>
-          <form id="upload_form" action="action.php" method="post" enctype="multipart/form-data" >
+          <form id="upload_form" action="upload_payroll.php" method="post" enctype="multipart/form-data" >
             <div class="form-inline">
               <div class="form-group">
                   <input type="text" name="month">
-                <input type="file" name="file" id="file">
+                <input type="file" name="excel_deductions" id="file">
               </div>
-              <button name="submit" type="submit" class="btn btn-sm btn-primary" onclick="uploadFile()" value="Upload File">Upload file</button>
+              <button name="import_deductions" type="submit" class="btn btn-sm btn-primary" onclick="uploadFile()" value="Upload File">Upload file</button>
 
             </div><br>
 
@@ -47,16 +47,17 @@
           </div>
 
           <!-- Upload Finished -->
-          <div class="js-upload-finished">
+    <!--       <div class="js-upload-finished">
             <h3>Processed files</h3>
             <div class="list-group">
               <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>Payslip August 1-15-2018</a>
               <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>Payslip August 16-31-2018</a>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
-    </div> <!-- /container -->
+    </div> 
+    <!-- /container -->
 
     <p><!-- /.content -->
 
