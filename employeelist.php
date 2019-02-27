@@ -241,7 +241,7 @@ if (ISSET($_POST["btnSubmit"])){
     $address=$_POST['address'];
     $contactnumber=$_POST['phonenumber'];
     $emailadd=$_POST['emailadd'];
-    $createdby= formatFullName('fml',$_POST['firstname'],$_POST['middlename'],$_POST['lastname']);
+    $createdby= $_SESSION["isLogin"]['lastname'] . $_SESSION["isLogin"]['firstname'];
     $createddate= date("Y-m-d H:i:s");
     $isactive = 1;
 
@@ -277,12 +277,18 @@ if (ISSET($_POST["btnSubmit"])){
                   '$createdby',
                   '$createddate'
                   ";
+    $data = _getAllDataByParam('user','idnumber="' . $idnumber . "\"");
 
-    $result = _saveData($tablename,$tablecolumns,$columvalues);
-    if($result['data']) { 
-        echo (popUp("success","Saved", "(" . $result['count'] . ") Record Saved!","employeelist.php"));
-    } else {  
-        echo (popUp("error","", "Problem in Adding New Record.",""));
+    if ($data != null && $data['count'] != 0){
+        echo (popUp("error","", "Problem in Adding New Record. Employee id already exist!",""));
+    }
+    else{
+        $result = _saveData($tablename,$tablecolumns,$columvalues);
+        if($result['data']) { 
+            echo (popUp("success","Saved", "(" . $result['count'] . ") Record Saved!","employeelist.php"));
+        } else {  
+            echo (popUp("error","", "Problem in Adding New Record.",""));
+        }
     }
 }
 

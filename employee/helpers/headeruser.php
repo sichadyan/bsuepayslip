@@ -159,7 +159,7 @@ to get the desired effect
               <p>About</p>
             </a>
             <li class="nav-item">
-            <a href="../../logout.php" onclick="return confirm('Are you sure you want to Log-Out?');" class="nav-link active">
+            <a href="logout.php" onclick="return confirm('Are you sure you want to Log-Out?');" class="nav-link active">
             <p> Logout</p>
          
           </a>

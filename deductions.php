@@ -111,7 +111,7 @@ else{
                         <input type="text" id="deductiondesc" name="deductiondesc" class="form-control" placeholder="Description"/>
                     </div>
 
-                    <div class="input-group mb-3">
+                  <!--   <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa fa-list"></i></span>
                             </div>
@@ -123,7 +123,7 @@ else{
                                 }
                                 ?>
                             </select><span class="bg-danger col-valign-center">&nbsp;</span>
-                        </div>
+                        </div> -->
                     
                      <div class="input-group mb-3">
                         <div class="input-group-prepend">
