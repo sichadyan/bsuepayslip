@@ -24,9 +24,9 @@
             <div class="form-inline">
               <div class="form-group">
                   <input type="text" name="month">
-                <input type="file" name="excel_deductions" id="file">
+                <input type="file" name="excel_employee" id="file">
               </div>
-              <button name="import_deductions" type="submit" class="btn btn-sm btn-primary" onclick="uploadFile()" value="Upload File">Upload file</button>
+              <button name="import_employee" type="submit" class="btn btn-sm btn-primary" onclick="uploadFile()" value="Upload File">Upload file</button>
 
             </div><br>
 
