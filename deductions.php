@@ -14,6 +14,16 @@ if ($deduction != null && $deduction['count'] != 0){
 else{
     $deducdataList = null;
 }
+
+//== GET POSITION LIST ==
+$positions = _getAllData('position');
+$positiondataList = array(); // empty array
+if ($positions != null && $positions['count'] != 0){       
+    $positiondataList = $positions['data'];
+}
+else{
+    $positiondataList = null;
+}
 //  var_dump ($deduction);
 ?>
 <!-- Main content -->
@@ -101,6 +111,20 @@ else{
                         <input type="text" id="deductiondesc" name="deductiondesc" class="form-control" placeholder="Description"/>
                     </div>
 
+                    <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-list"></i></span>
+                            </div>
+                            <select id="positionid" name="positionid" class="form-control dropdown" required>
+                                <option value="">[Select Position]</option>
+                                <?php 
+                                foreach ($positiondataList as $row){
+                                    echo '<option value="'. $row["id"] .'">' . $row["positionname"] .'</option>';
+                                }
+                                ?>
+                            </select><span class="bg-danger col-valign-center">&nbsp;</span>
+                        </div>
+                    
                      <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-id-card"></i></span>

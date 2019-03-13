@@ -107,15 +107,22 @@ if (ISSET($_POST['btnSubmit'])){
 
     $idnumber=$_POST['uName'];
     $password=md5($_POST['uPass']);
-   
-
+    
+    
     $data = _getAllDataByParam('user','idnumber="' . $idnumber . '" and password="' . $password . "\"");
     //var_dump($data['data']);
 
     if ($data != null && $data['count'] != 0){
         $_SESSION["isLogin"] = $data['data'][0];
         $fullname = $data['data'][0]['lastname'] . ", " . $data['data'][0]['firstname'];
-        echo (popUp("success","Authenticated", "Welcome! ". $fullname ,"index.php"));
+        $roleid = $data['data'][0]['roleid'];
+        $pw = $data['data'][0]['password'];
+          if($roleid == 0){
+            echo (popUp("success","Authenticated", "Welcome! ". $fullname ,"index.php"));
+          }
+          else{
+            echo (popUp("success","Authenticated", "Welcome! ". $fullname ,"employee/index.php"));
+          }
         exit();
     }
     else{

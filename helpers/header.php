@@ -98,7 +98,7 @@ to get the desired effect
 		  </li>      
           
           
-          <li class="nav-item has-treeview">
+         <!--  <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-male"></i>
               <p> Employee <em class="fa fa-angle-left right"></em> </p>
@@ -118,9 +118,31 @@ to get the desired effect
               </li>
 
             </ul>
+          </li> -->
+          
+          
+          <li class="nav-item">
+            <a href="employeelist.php" class="nav-link">
+              <i class="fa fa-user-circle nav-icon"></i>
+              <p>Employee</p>
+            </a>
           </li>
-          
-          
+
+<!--           <li class="nav-item">
+            <a href="department.php" class="nav-link">
+              <i class="fa fa-building nav-icon"></i>
+              <p>Department</p>
+            </a>
+          </li> -->
+
+          <li class="nav-item">
+            <a href="position.php" class="nav-link">
+              <i class="fa fa-user nav-icon"></i>
+              <p>Positions</p>
+            </a>
+          </li>
+
+
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-address-card"></i>
@@ -161,7 +183,7 @@ to get the desired effect
               </li> -->
             </ul>
           </li>
-          <li class="nav-item has-treeview">
+<!--           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-edit"></i>
               <p> Payslip <em class="fa fa-angle-left right"></em> </p>
@@ -186,7 +208,7 @@ to get the desired effect
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
           <li class="nav-header">MISCELLANEOUS</li>
           <li class="nav-item">
             <a href="mailbox.php" class="nav-link">
