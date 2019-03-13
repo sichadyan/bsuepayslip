@@ -26,7 +26,7 @@ include('../config/authenticate.php')
   <link rel="stylesheet" href="../dist/css/adminlte.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
+  <link rel="stylesheet" type="text/css" href="https://printjs-4de6.kxcdn.com/print.min.css">
 
 
 </head>
@@ -135,9 +135,9 @@ to get the desired effect
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="contact.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Benefits</p>
+                  <p>Contact Admin</p>
                 </a>
               </li>
             </ul>

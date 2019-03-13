@@ -2,8 +2,8 @@
 
 function _getAllData($tablename){
     if ($tablename != NULL){
-        require_once('config/fix_mysql.inc.php');
-        require_once("config/config.php");
+        require_once('../config/fix_mysql.inc.php');
+        require_once("../config/config.php");
         $result = mysql_query("SELECT * FROM " . $tablename)  or die (mysql_error());
         
         if($result){
@@ -28,8 +28,8 @@ function _getAllData($tablename){
 
 function _getAllDataByParam($tablename,$param){
     if ($tablename != NULL){
-        require_once('config/fix_mysql.inc.php');
-        require_once("config/config.php");
+        require_once('../config/fix_mysql.inc.php');
+        require_once("../config/config.php");
         $result = mysql_query("SELECT * FROM " . $tablename . " WHERE " . $param)  or die (mysql_error());
         // echo "SELECT * FROM " . $tablename . " WHERE " . $param;
         if($result){
@@ -52,8 +52,8 @@ function _getAllDataByParam($tablename,$param){
 function _saveData($tablename,$tableColumns,$ColumnValues){
 
     if ($tablename != NULL){
-        require_once('config/fix_mysql.inc.php');
-        require_once("config/config.php");
+        require_once('../config/fix_mysql.inc.php');
+        require_once("../config/config.php");
 
         $query = "INSERT INTO " . $tablename . 
         " ( " . $tableColumns . " ) 
@@ -78,8 +78,8 @@ function _saveData($tablename,$tableColumns,$ColumnValues){
 function _updateData($tablename,$ColumnValues,$param){
 
     if ($tablename != NULL){
-        require_once('config/fix_mysql.inc.php');
-        require_once("config/config.php");
+        require_once('../config/fix_mysql.inc.php');
+        require_once("../config/config.php");
 
         $query = "UPDATE " . $tablename . " SET " . $ColumnValues . " WHERE " . $param;
 
@@ -103,8 +103,8 @@ function _updateData($tablename,$ColumnValues,$param){
 function _removeData($tablename,$param){
 
     if ($tablename != NULL){
-        require_once('config/fix_mysql.inc.php');
-        require_once("config/config.php");
+        require_once('../config/fix_mysql.inc.php');
+        require_once("../config/config.php");
 
         $query = "DELETE FROM " . $tablename . " WHERE " . $param;
 

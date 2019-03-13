@@ -1,6 +1,13 @@
 <?php
 //Always include this on the top your PHP page
-include('config/authenticate.php')  
+include('config/authenticate.php');
+
+$message_data = _getAllDataByParam('message_tbl', 'status=0');
+if ($message_data != null && $message_data['count'] != 0){
+                        
+                         $count = $message_data["count"];
+                      }
+
 ?>
 
 <!DOCTYPE html>
@@ -212,9 +219,9 @@ to get the desired effect
           <li class="nav-header">MISCELLANEOUS</li>
           <li class="nav-item">
             <a href="mailbox.php" class="nav-link">
-              <i class="nav-icon fa fa-print"></i>
-              <p>Messages</p>
-            </a>
+                    <i class="fa fa-inbox"></i> Inbox
+                    <span class="badge bg-primary float-right"><?php echo $count; ?></span>
+                  </a>
               <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-toolbox"></i>
