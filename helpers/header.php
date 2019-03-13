@@ -1,6 +1,13 @@
 <?php
 //Always include this on the top your PHP page
-include('config/authenticate.php')  
+include('config/authenticate.php');
+// include('helpers/crud.php');
+// $message_data = _getAllDataByParam('message_tbl', 'status=0');
+// if ($message_data != null && $message_data['count'] != 0){
+                        
+//                          $count = $message_data["count"];
+//                       }
+
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +75,7 @@ to get the desired effect
   <aside class="main-sidebar sidebar-light-success elevation-4 ">
     <!-- Brand Logo -->
     <a href="index.php" class="brand-link bg-success">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="dist/img/bsulogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">ePayslip</span>
     </a>
@@ -157,7 +164,7 @@ to get the desired effect
               </li>
             </ul>
           </li>
-            <li class="nav-item has-treeview">
+           <!--  <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-money-bill-alt"></i>
               <p>Payroll<em class="fa fa-angle-left right"></em> </p>
@@ -169,52 +176,20 @@ to get the desired effect
                   <p>Generate Payroll</p></p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>View Payroll</p>
-                </a>
-              </li>
-               <!-- <li class="nav-item">
-                <a href="deductionassignment.php" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Deduction Assignment</p>
-                </a>
-              </li> -->
-            </ul>
-          </li>
-<!--           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-edit"></i>
-              <p> Payslip <em class="fa fa-angle-left right"></em> </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="viewpayslip.php" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>View Payslip</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Payslip Setup</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>History</p>
-                </a>
-              </li>
             </ul>
           </li> -->
+           <li class="nav-item">
+            <a href="payroll.php" class="nav-link">
+              <i class="fa fa-file nav-icon"></i>
+              <p>Generate Payroll</p>
+            </a>
+          </li>
           <li class="nav-header">MISCELLANEOUS</li>
           <li class="nav-item">
             <a href="mailbox.php" class="nav-link">
-              <i class="nav-icon fa fa-print"></i>
-              <p>Messages</p>
-            </a>
+                    <i class="fa fa-inbox"></i> Inbox
+                    <span class="badge bg-primary float-right"><?php echo $count; ?></span>
+                  </a>
               <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-toolbox"></i>

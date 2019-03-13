@@ -39,9 +39,9 @@ else{
 <!-- Main content -->
 
 <div class="content">
-    <div class="container-fluid">
-        <div class="card card-success">
-            <div class="card-header">
+    <div class="container-fluid" >
+        <div class="card card-success" >
+            <div class="card-header" style="background-color:  #800000;">
                 <button type="button" class="btn btn-sm btn-default float-right" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i>Add Employee</button>
             </div>
             <div class="card-body">
@@ -241,7 +241,7 @@ if (ISSET($_POST["btnSubmit"])){
     $address=$_POST['address'];
     $contactnumber=$_POST['phonenumber'];
     $emailadd=$_POST['emailadd'];
-    $createdby= formatFullName('fml',$_POST['firstname'],$_POST['middlename'],$_POST['lastname']);
+    $createdby= $_SESSION["isLogin"]['lastname'] . $_SESSION["isLogin"]['firstname'];
     $createddate= date("Y-m-d H:i:s");
     $isactive = 1;
 
@@ -277,12 +277,18 @@ if (ISSET($_POST["btnSubmit"])){
                   '$createdby',
                   '$createddate'
                   ";
+    $data = _getAllDataByParam('user','idnumber="' . $idnumber . "\"");
 
-    $result = _saveData($tablename,$tablecolumns,$columvalues);
-    if($result['data']) { 
-        echo (popUp("success","Saved", "(" . $result['count'] . ") Record Saved!","employeelist.php"));
-    } else {  
-        echo (popUp("error","", "Problem in Adding New Record.",""));
+    if ($data != null && $data['count'] != 0){
+        echo (popUp("error","", "Problem in Adding New Record. Employee id already exist!",""));
+    }
+    else{
+        $result = _saveData($tablename,$tablecolumns,$columvalues);
+        if($result['data']) { 
+            echo (popUp("success","Saved", "(" . $result['count'] . ") Record Saved!","employeelist.php"));
+        } else {  
+            echo (popUp("error","", "Problem in Adding New Record.",""));
+        }
     }
 }
 

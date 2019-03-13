@@ -20,8 +20,8 @@ else{
 
 <div class="content">
     <div class="container-fluid">
-        <div class="card card-success">
-            <div class="card-header">
+        <div class="card card-success" >
+            <div class="card-header" style="background-color:  #800000;">
                 <button type="button" class="btn btn-sm btn-default float-right" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i>Add Position</button>
             </div>
             <div class="card-body">
