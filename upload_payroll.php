@@ -3,7 +3,7 @@
 $connect = mysqli_connect("localhost", "root", "", "bsuepayslip");
 if ($connect->connect_error) {
     die("Connection failed: " . $connect->connect_error);
-} 
+}
 
 
 if(isset($_POST["import_payroll"])){
@@ -11,14 +11,15 @@ if(isset($_POST["import_payroll"])){
 	 $extension = end($filename); // For getting Extension of selected file
 	 $allowed_extension = array("xls", "xlsx", "csv"); //allowed extension
 	  if(in_array($extension, $allowed_extension)){
-	  	  $file = $_FILES["excel_payroll"]["tmp_name"]; 
- 	
-		 include("plugins/PHPExcel/Classes/PHPExcel.php"); 
+	  	  $file = $_FILES["excel_payroll"]["tmp_name"];
+
+		 include("plugins/PHPExcel/Classes/PHPExcel.php");
 		 include("plugins/PHPExcel/Classes/PHPExcel/IOFactory.php");
-		 // include 'helpers/header.php';
+		 include 'helpers/header.php';
+
 		 $objPHPExcel = PHPExcel_IOFactory::load($file);
 	 	 $sheetCount = 4;
-	 	 
+
 	 	 	 for($i = 0; $i <= $sheetCount; $i++) {
 				$objPHPExcel->setActiveSheetIndex($i);
 				$sheetInsertData   = $objPHPExcel->getActiveSheet()->toArray(NULL, TRUE, TRUE, TRUE);
@@ -29,11 +30,11 @@ if(isset($_POST["import_payroll"])){
 				if($i == 1) {
 					foreach($sheetInsertData as $j => $col) {
 						if($j > 2) {
-							#LEDGER ID 
+							#LEDGER ID
 							$a 	= $col["A"]."|";
 							$aa = explode("|", $a);
 
-							#EMPLOYEE ID 
+							#EMPLOYEE ID
 							$b 	= $col["B"]."|";
 							$bb	= explode("|", $b);
 
@@ -122,7 +123,7 @@ if(isset($_POST["import_payroll"])){
 
 
  								$total_deduction =  $absent_without + $with_tax + $pag_ibig_contri + $pag_ibig_loan + $pag_ibig_calamity + $skapapa + $emp_dues + $land_loan + $over_payment + $v_care;
-								
+
 
 								$emp_id = _getAllDataByParam('user','employeeid="' . $bb[$x] . "\"");
 										 if ($emp_id != null && $emp_id['count'] != 0){
@@ -133,7 +134,7 @@ if(isset($_POST["import_payroll"])){
 								if(trim($aa[$x]) != ''){
 										#SAVING OF SALARY
 										$createddate= date("Y-m-d H:i:s");
-										
+
 										$tablename_salary 			= 'salary_info';
 										$tablecolumns_salary 		= 'user_id, amount, date_created, amount_earned, total_deduction';
 										$columvalues_salary 		= "'$id_emp','$hh[$x]','$createddate','$amnt_earned[$x]', '$total_deduction'";
@@ -151,28 +152,28 @@ if(isset($_POST["import_payroll"])){
 										$tablecolumns_deduction		= 'user_id,absences_without_pay, withholding_tax, pagibig_cont	, pagibig_load, pagibig_calamity_loan, skapapa_cci, emp_asso_due, landbank_loan, over_payment, value_care, indicator';
 										$columvalues_deduction		= "'$id_emp','$awp[$x]','$kk[$x]','$ll[$x]','$mm[$x]','$nn[$x]','$oo[$x]','$pp[$x]','$qq[$x]','$rr[$x]','$ss[$x]', '$sheetName'";
 										$result_deduction			= _saveData($tablename_deduction,$tablecolumns_deduction,$columvalues_deduction);
-										
+
 										$api = "TR-CHARL388930_ZHEXM";
 										$mes = "Payslip is available!";
 										$send_mes = itexmo($number, $mes, $api);
-										
-									
+
+
 								}
 
 							}
-							
-							
+
+
 						}
 
-					}	
+					}
 					echo '<div class="alert alert-success" role="alert">
 						  This is a success alert with <a href="payroll.php" class="alert-link">an example link</a>. Give it a click if you like.
-						  </div>';	
+						  </div>';
 				}
-			}	
+			}
 
 	  }
-	  
+
 }
 
 

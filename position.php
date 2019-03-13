@@ -3,7 +3,6 @@ $_HeaderTitle = 'Position';
 
 include 'helpers/header.php';
 include 'helpers/helper.php';
-include 'helpers/crud.php';
 
 //== GET USER LIST ==
 $positions = _getAllData('position');

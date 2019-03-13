@@ -3,7 +3,6 @@ $_HeaderTitle = 'Employee List';
 
 include 'helpers/header.php';
 include 'helpers/helper.php';
-include 'helpers/crud.php';
 
 //== GET EMPLOYEE LIST ==
 $users_employee = _getAllData('user');
@@ -34,6 +33,9 @@ if ($positions != null && $positions['count'] != 0){
 else{
     $positiondataList = null;
 }
+
+
+
 //  var_dump ($users_employee);
 ?>
 <!-- Main content -->

@@ -1,12 +1,12 @@
 <?php
 //Always include this on the top your PHP page
 include('config/authenticate.php');
-// include('helpers/crud.php');
-// $message_data = _getAllDataByParam('message_tbl', 'status=0');
-// if ($message_data != null && $message_data['count'] != 0){
-                        
-//                          $count = $message_data["count"];
-//                       }
+
+require_once('helpers/crud.php');
+$message_data = _getAllDataByParam('message_tbl', 'status=0');
+if ($message_data != null && $message_data['count'] != 0){
+                         $count = $message_data["count"];
+                      }
 
 ?>
 
@@ -102,9 +102,9 @@ to get the desired effect
               <i class="nav-icon fa fa-dashboard"></i>
               <p> Home</p>
             </a>
-		  </li>      
-          
-          
+		  </li>
+
+
          <!--  <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-male"></i>
@@ -126,8 +126,8 @@ to get the desired effect
 
             </ul>
           </li> -->
-          
-          
+
+
           <li class="nav-item">
             <a href="employeelist.php" class="nav-link">
               <i class="fa fa-user-circle nav-icon"></i>
