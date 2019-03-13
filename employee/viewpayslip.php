@@ -48,11 +48,13 @@ else{
                         <tr>
                             <th>Action
                             </th>
-                            <th>ID
-                            </th>
                             <th>Title
                             </th>
-                            <th>Created Date
+                            <th>For the Month of
+                            </th>
+                            <th>For the Year of
+                            </th>
+                            <th>Date Release
                             </th>
                         </tr>
                     </thead>
@@ -69,8 +71,9 @@ else{
 
                                 echo '<tr>';
                                 echo '<td><div class="btn-group"><button class="btn btn-info" id="details" data-id="'. $row['user_id'] .'" type="button">Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>';
-                                echo '<td>'. $row["id"] .'</td>';
-                                echo '<td>'. $row['indicator'] .'</td>';
+                                echo '<td>'. $row["indicator"] .'</td>';
+                                echo '<td>'. $row['for_month_of'] .'</td>';
+                                echo '<td>'. $row['year'] .'</td>';
                                 echo '<td>'. $row['date_created'] .'</td>';
                                 echo '</tr>';
 
@@ -103,7 +106,7 @@ else{
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-      	<h4 class="modal-title">Modal Header</h4>
+      	<h4 class="modal-title">Print this payslip!</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         
       </div>
