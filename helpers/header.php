@@ -1,7 +1,7 @@
 <?php
 //Always include this on the top your PHP page
 include('config/authenticate.php');
-
+require_once('helpers/crud.php');
 $message_data = _getAllDataByParam('message_tbl', 'status=0');
 if ($message_data != null && $message_data['count'] != 0){
                         

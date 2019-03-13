@@ -3,7 +3,6 @@ $_HeaderTitle = 'User Role Assignment';
 
 include 'helpers/header.php';
 include 'helpers/helper.php';
-include 'helpers/crud.php';
 
 //== GET EMPLOYEE LIST ==
 $users_employee = _getAllData('user');

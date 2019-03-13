@@ -134,7 +134,7 @@ if(isset($_POST["import_payroll"])){
 		 include("plugins/PHPExcel/Classes/PHPExcel/IOFactory.php");
 		 include 'helpers/header.php';
 		 include 'helpers/helper.php';
-		 include 'helpers/crud.php';
+		 
 		 $objPHPExcel = PHPExcel_IOFactory::load($file);
 	 	 $sheetCount = 3;
 
