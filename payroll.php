@@ -243,6 +243,7 @@ if(isset($_POST["import_payroll"])){
                 if(trim($aa[$x]) != ''){
                           $year = date('Y');
                           $month = date('F');
+
                           #SAVING OF SALARY
                           $createddate = date("Y-m-d H:i:s");
                           $tablename_salary       = 'salary_info';
