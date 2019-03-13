@@ -39,9 +39,9 @@ else{
 <!-- Main content -->
 
 <div class="content">
-    <div class="container-fluid">
-        <div class="card card-success">
-            <div class="card-header">
+    <div class="container-fluid" >
+        <div class="card card-success" >
+            <div class="card-header" style="background-color:  #800000;">
                 <button type="button" class="btn btn-sm btn-default float-right" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i>Add Employee</button>
             </div>
             <div class="card-body">
@@ -78,7 +78,7 @@ else{
                         else{
                             foreach ($empdataList as $row){
                                 echo '<tr>';
-                                echo '<td><div class="btn-group"><a href="employeeedit.php?id='. $row["id"] .'" class="btn btn-sm btn-primary">Edit</a><form method="post"><button type="submit" onclick="return confirm(\'Are you sure you want to delete this?\');" class="btn btn-sm btn-danger" name="btnDelete" id="btnDelete" value="'. $row["id"].'">Delete</button></form></div></td>';
+                                echo '<td><div class="btn-group"><a href="employeeedit.php?id='. $row["id"] .'" class="btn btn-sm btn-primary">Edit</a><a href="employeeedit.php?id='. $row["id"] .'" class="btn btn-sm btn-info">Details</a><form method="post"><button type="submit" onclick="return confirm(\'Are you sure you want to delete this?\');" class="btn btn-sm btn-danger" name="btnDelete" id="btnDelete" value="'. $row["id"].'">Delete</button></form></div></td>';
                                 echo '<td>'. $row["idnumber"] .'</td>';
                                 echo '<td>'. getRoleName($row['roleid']) .'</td>';
                                 echo '<td>'. formatFullName('lfm',$row['firstname'],$row['middlename'],$row['lastname']) .'</td>';
@@ -120,7 +120,7 @@ else{
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-id-card"></i></span>
                             </div>
-                            <input type="text" id="idnumber" name="idnumber" class="form-control" placeholder="ID Number" required /><span class="bg-danger col-valign-center">&nbsp;</span>
+                            <input type="text" id="idnumber" name="idnumber" class="form-control" placeholder="ID Ledger" required /><span class="bg-danger col-valign-center">&nbsp;</span>
                         </div>
 
                         <div class="input-group mb-3">

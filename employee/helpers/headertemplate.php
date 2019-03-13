@@ -22,6 +22,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../dist/css/style.css">
 
+  <link rel="stylesheet" type="text/css" media="print" href="../plugins/bootstrap/css/bootstrap.min.css">
 </head>
 <body class="hold-transition register-page">
 <div class="register-box">

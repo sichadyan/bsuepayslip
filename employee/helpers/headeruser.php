@@ -24,6 +24,7 @@ include('config/authenticate.php')
   <link rel="stylesheet" href="../plugins/datepicker/datepicker3.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.css">
+  
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
